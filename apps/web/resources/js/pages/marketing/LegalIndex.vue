@@ -115,7 +115,9 @@ const groups = computed(() => {
                             class="group flex h-full flex-col rounded-card border bg-surface p-5 shadow-clay transition-shadow hover:shadow-clay-lg"
                             :data-test="`legal-doc-${doc.key}`"
                         >
-                            <span class="flex items-start justify-between gap-3">
+                            <span
+                                class="flex items-start justify-between gap-3"
+                            >
                                 <span
                                     class="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary-soft text-primary-strong"
                                     aria-hidden="true"
@@ -127,7 +129,7 @@ const groups = computed(() => {
                                     aria-hidden="true"
                                 />
                             </span>
-                            <span class="mt-4 text-h2 text-balance">{{
+                            <span class="text-h2 mt-4 text-balance">{{
                                 doc.title
                             }}</span>
                             <span
@@ -197,16 +199,11 @@ const groups = computed(() => {
                     {{ t('marketing.legal.controls_hint') }}
                 </p>
                 <Button variant="secondary" size="sm" as-child>
-                    <Link
-                        :href="
-                            authed ? endpoints.privacy.show() : login()
-                        "
-                        >{{
-                            authed
-                                ? t('marketing.legal.controls_open')
-                                : t('marketing.legal.controls_login')
-                        }}</Link
-                    >
+                    <Link :href="authed ? endpoints.privacy.show() : login()">{{
+                        authed
+                            ? t('marketing.legal.controls_open')
+                            : t('marketing.legal.controls_login')
+                    }}</Link>
                 </Button>
             </div>
         </div>

@@ -352,7 +352,11 @@ function countdown(left: { days: number; hours: number } | null): string {
         </p>
     </header>
 
-    <ul v-if="ws" class="grid gap-3 sm:grid-cols-2" data-test="privacy-overview">
+    <ul
+        v-if="ws"
+        class="grid gap-3 sm:grid-cols-2"
+        data-test="privacy-overview"
+    >
         <li
             class="flex items-start gap-3 rounded-card border bg-surface p-4 shadow-clay-sm"
         >
@@ -709,11 +713,16 @@ function countdown(left: { days: number; hours: number } | null): string {
                     class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-surface-2 text-primary-strong"
                     aria-hidden="true"
                 >
-                    <component :is="legalDocIcon(row.document)" class="size-4" />
+                    <component
+                        :is="legalDocIcon(row.document)"
+                        class="size-4"
+                    />
                 </span>
                 <div class="min-w-0 flex-1">
                     <Link
-                        :href="endpoints.legalVersion(row.document, row.version)"
+                        :href="
+                            endpoints.legalVersion(row.document, row.version)
+                        "
                         class="font-medium text-foreground underline-offset-2 hover:text-primary-strong hover:underline"
                     >
                         {{ docTitle(row.document, row.title) }}
@@ -727,7 +736,9 @@ function countdown(left: { days: number; hours: number } | null): string {
                     </p>
                 </div>
                 <OpsBadge
-                    :label="t('ui.legal.accept.version', { version: row.version })"
+                    :label="
+                        t('ui.legal.accept.version', { version: row.version })
+                    "
                     mono
                 />
             </li>

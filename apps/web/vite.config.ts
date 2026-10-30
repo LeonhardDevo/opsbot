@@ -44,14 +44,7 @@ export default defineConfig({
         port: 5174,
         strictPort: true,
         watch: {
-            ignored: [
-                '**/.agents/**',
-                '**/.claude/**',
-                '**/.cursor/**',
-                '**/.junie/**',
-                '**/vendor/**',
-                '**/lang/php_*.json',
-            ],
+            ignored: ['**/vendor/**', '**/lang/php_*.json'],
         },
     },
     test: {

@@ -139,7 +139,7 @@ function confirm(): void {
                 </p>
             </div>
 
-            <p class="mt-6 border-t pt-4 text-caption text-pretty">
+            <p class="text-caption mt-6 border-t pt-4 text-pretty">
                 {{ t('ui.email_opt_out.notice') }}
                 <Link
                     :href="endpoints.legal('privacy')"

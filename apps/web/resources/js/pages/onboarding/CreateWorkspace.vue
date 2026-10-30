@@ -149,9 +149,7 @@ const countryOptions = computed(() =>
 const nameError = ref<string | null>(null);
 const dpaError = ref<string | null>(null);
 
-const dpaHref = computed(
-    () => props.dpa?.url ?? endpoints.legal('dpa').url,
-);
+const dpaHref = computed(() => props.dpa?.url ?? endpoints.legal('dpa').url);
 
 function dpaAccepted(): boolean {
     if (form.dpa) {

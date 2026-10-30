@@ -740,7 +740,8 @@
     .legal-prose blockquote {
         border-left: 3px solid var(--accent-mint-strong);
         background: var(--accent-mint-soft);
-        border-radius: 6px var(--radius-control-size) var(--radius-control-size) 6px;
+        border-radius: 6px var(--radius-control-size) var(--radius-control-size)
+            6px;
         padding: 0.875rem 1rem;
     }
 

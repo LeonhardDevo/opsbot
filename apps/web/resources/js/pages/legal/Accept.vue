@@ -47,7 +47,9 @@ function submit(): void {
                     <h1 id="legal-accept-title" class="text-display-m">
                         {{ t('ui.legal.accept.title') }}
                     </h1>
-                    <p class="text-[0.9375rem] text-pretty text-muted-foreground">
+                    <p
+                        class="text-[0.9375rem] text-pretty text-muted-foreground"
+                    >
                         {{ t('ui.legal.accept.description') }}
                     </p>
                 </div>
@@ -84,10 +86,7 @@ function submit(): void {
                                     }}</span
                                 >
                             </div>
-                            <p
-                                v-if="doc.workspace"
-                                class="text-caption mt-0.5"
-                            >
+                            <p v-if="doc.workspace" class="text-caption mt-0.5">
                                 {{
                                     t('ui.legal.accept.for_workspace', {
                                         name: doc.workspace,
