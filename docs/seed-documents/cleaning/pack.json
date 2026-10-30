@@ -1,0 +1,23 @@
+{
+  "key": "cleaning",
+  "version": "1.0",
+  "title": { "en": "Cleaning starter pack", "ru": "Стартовый набор для клининга" },
+  "description": {
+    "en": "Eight short template regulations for cleaning and facility-service teams. Imported as drafts: review and adapt before approving.",
+    "ru": "Восемь коротких шаблонов регламентов для клининга и сервисных бригад. Импортируются как черновики: проверьте и адаптируйте перед утверждением."
+  },
+  "departments": [
+    { "code": "residential", "name": { "en": "Residential cleaning", "ru": "Уборка квартир" } },
+    { "code": "commercial", "name": { "en": "Commercial cleaning", "ru": "Уборка офисов" } }
+  ],
+  "documents": [
+    { "key": "damage-property", "file": "damage-property.md", "title": { "en": "Client property damage: what to do", "ru": "Повреждение имущества клиента: что делать" }, "tags": ["incident", "damage"], "department_codes": [], "roles": [], "version": "1.0" },
+    { "key": "key-handover", "file": "key-handover.md", "title": { "en": "Keys and access cards", "ru": "Ключи и карты доступа" }, "tags": ["keys"], "department_codes": ["residential"], "roles": [], "version": "1.0" },
+    { "key": "chemical-safety", "file": "chemical-safety.md", "title": { "en": "Chemical safety", "ru": "Безопасность при работе с химией" }, "tags": ["safety"], "department_codes": [], "roles": [], "version": "1.0" },
+    { "key": "no-access", "file": "no-access.md", "title": { "en": "No access to the property", "ru": "Нет доступа на объект" }, "tags": ["incident", "no_access"], "department_codes": [], "roles": [], "version": "1.0" },
+    { "key": "compensation-rules", "file": "compensation-rules.md", "title": { "en": "Compensation rules for client damage", "ru": "Правила компенсаций за ущерб клиенту" }, "tags": ["compensation"], "department_codes": [], "roles": [], "version": "1.0" },
+    { "key": "client-reply-templates", "file": "client-reply-templates.md", "title": { "en": "Client reply templates", "ru": "Шаблоны ответов клиентам" }, "tags": ["templates"], "department_codes": [], "roles": [], "version": "1.0" },
+    { "key": "lost-found", "file": "lost-found.md", "title": { "en": "Lost and found items", "ru": "Забытые и потерянные вещи" }, "tags": ["incident", "lost_item"], "department_codes": [], "roles": [], "version": "1.0" },
+    { "key": "manager-complaint-playbook", "file": "manager-complaint-playbook.md", "title": { "en": "Manager playbook: complaints and incidents", "ru": "Памятка менеджера: жалобы и инциденты" }, "tags": ["playbook"], "department_codes": [], "roles": ["manager"], "version": "1.0" }
+  ]
+}

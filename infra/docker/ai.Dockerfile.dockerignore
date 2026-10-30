@@ -1,0 +1,13 @@
+**
+!apps/ai/**
+
+apps/ai/.env
+apps/ai/.env.*
+!apps/ai/.env.example
+apps/ai/.venv
+apps/ai/**/__pycache__
+apps/ai/.pytest_cache
+apps/ai/.ruff_cache
+apps/ai/.mypy_cache
+apps/ai/tests
+**/.DS_Store

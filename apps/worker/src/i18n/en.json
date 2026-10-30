@@ -1,0 +1,268 @@
+{
+  "common": {
+    "error": "Something went wrong on our side. Please try again in a minute.",
+    "unavailable": "{product} is temporarily unavailable. Please try again a bit later.",
+    "rate_limited": "You are sending messages too fast. Please wait a minute and try again.",
+    "private_only": "Please write to me in a private chat.",
+    "cancel": "Cancel"
+  },
+  "start": {
+    "welcome_linked": "Welcome back, <b>{name}</b>!\nYou are connected to <b>{workspace}</b>. Ask me a work question in plain words, or type /help.",
+    "welcome_unlinked": "Hi! I am the {product} bot.\n\nTo get started, link your Telegram account:\n1. Open {product} → <b>Settings → Integrations</b>.\n2. Press <b>Connect Telegram</b> and follow the link back to this chat.",
+    "welcome_company": "Hi! I am your company's work assistant.\n\nTo start, ask your manager for a personal invitation link and open it from this Telegram account.",
+    "linked": "Done! Your Telegram is now linked as <b>{name}</b>.\nAsk me a question, or type /help to see what I can do.",
+    "linked_workspace": "Done! Your Telegram is now linked as <b>{name}</b> (company <b>{workspace}</b>).\nAsk me a question, or type /help to see what I can do.",
+    "invalid_token": "This link is invalid or has expired. Generate a new one in {product} → <b>Settings → Integrations</b>.",
+    "invalid_company_link": "This invitation link is invalid, expired or already used. Ask your manager for a new one.",
+    "wrong_bot": "This invitation link belongs to another company's bot. Open it from the bot your manager sent you.",
+    "conflict": "This Telegram account is already linked to another user in this bot. Unlink it there first with /unlink, then try again.",
+    "open_settings": "Open integration settings"
+  },
+  "unlinked": {
+    "message": "Your Telegram account is not linked to {product} yet.\n\nOpen {product} → <b>Settings → Integrations</b>, press <b>Connect Telegram</b> and follow the link. It takes less than a minute.",
+    "company": "Your Telegram account is not linked to this company yet. Ask your manager for a personal invitation link.",
+    "settings_url": "Settings: {url}"
+  },
+  "help": {
+    "title": "<b>What I can do</b>",
+    "intro": "Send me a work question in plain words. I answer only from your company's approved documents and show the sources. If the answer is not there, I can pass the question to a manager.",
+    "commands": "Commands:"
+  },
+  "commands": {
+    "start": "Start or link your account",
+    "help": "What I can do",
+    "lang": "Change language",
+    "whoami": "Show my profile",
+    "history": "My last questions",
+    "tasks": "My open tasks",
+    "incident": "Report an incident",
+    "ask_manager": "Pass my last question to a manager",
+    "queue": "Questions waiting for my answer",
+    "privacy": "What happens to my data",
+    "unlink": "Unlink this Telegram account"
+  },
+  "lang": {
+    "choose": "Choose your language:",
+    "changed": "Language set to English.",
+    "button_ru": "Русский",
+    "button_en": "English"
+  },
+  "whoami": {
+    "linked": "<b>{name}</b>\nCompany: <b>{workspace}</b>\nRole: {role}\nDepartments: {departments}\nLanguage: {locale}",
+    "no_departments": "not assigned",
+    "departments_count": {
+      "one": "{count} department",
+      "other": "{count} departments"
+    }
+  },
+  "assistant": {
+    "sources": {
+      "one": "<b>Source:</b>",
+      "other": "<b>Sources ({count}):</b>"
+    },
+    "page": "p. {page}",
+    "check_source": "<i>Medium confidence — check the source.</i>",
+    "refused_hint": "I couldn't find this in your company's approved documents. I can pass the question to a manager.",
+    "empty_answer": "I have no answer for that yet.",
+    "unknown_command": "I do not know this command. Type /help to see what I can do.",
+    "text_only": "I understand text messages only. Please type your question.",
+    "pass_to_manager": "Pass to manager"
+  },
+  "actions": {
+    "expired": "This button has expired. Ask your question again.",
+    "forbidden": "This button belongs to another user.",
+    "done": "Done.",
+    "failed": "Could not complete the action. Please try again later.",
+    "unavailable": "This action is not available."
+  },
+  "notify": {
+    "fallback": "You have a new notification in {product}."
+  },
+  "opsbot": {
+    "roles": {
+      "owner": "owner",
+      "admin": "administrator",
+      "manager": "manager",
+      "employee": "employee"
+    },
+    "notice": {
+      "button": "I understand",
+      "acknowledged": "Thank you. You can ask your question now.",
+      "required": "Please read the notice above and press <b>I understand</b> first."
+    },
+    "group": {
+      "private_only": "I answer only in private chats, so that answers match each employee's access. Please write to me privately.",
+      "button": "Write to me privately"
+    },
+    "history": {
+      "title": "<b>Your last questions</b>",
+      "empty": "You have not asked any questions yet.",
+      "line": "• {asked} — {question}\n  <i>{status}</i>",
+      "answered": "answered from the documents",
+      "refused": "not found in the documents",
+      "manager": "a manager answered"
+    },
+    "tasks": {
+      "title": {
+        "one": "<b>You have {count} open task</b>",
+        "other": "<b>You have {count} open tasks</b>"
+      },
+      "empty": "You have no open tasks.",
+      "line": "• <b>{number}</b> {title}",
+      "due": "due {due}",
+      "overdue": "overdue",
+      "in_progress": "in progress",
+      "start": "Start {number}",
+      "done": "Done {number}"
+    },
+    "incident": {
+      "no_permission": "You cannot report incidents. Please contact your manager.",
+      "choose_category": "<b>New incident</b>\nChoose what happened:",
+      "describe": "Describe what happened in one message (client, room, what is damaged).",
+      "placeholder": "What happened?",
+      "too_long": "The description is too long. Please keep it under {limit} characters.",
+      "confirm": "<b>Check the incident before sending</b>\nCategory: {category}\n<blockquote>{description}</blockquote>",
+      "confirm_button": "Confirm",
+      "cancelled": "The incident was not created.",
+      "expired": "This incident draft has expired. Start again with /incident.",
+      "categories": {
+        "damage": "Damage",
+        "complaint": "Complaint",
+        "no_access": "No access",
+        "injury": "Injury",
+        "lost_item": "Lost item",
+        "other": "Other"
+      },
+      "report_button": "Report incident"
+    },
+    "queue": {
+      "title": {
+        "one": "<b>{count} question waits for your answer</b>",
+        "other": "<b>{count} questions wait for your answer</b>"
+      },
+      "empty": "No open questions are waiting for you.",
+      "line": "• <b>{number}</b> from {employee}, {age}\n<blockquote>{question}</blockquote>",
+      "answer": "Answer {number}",
+      "forbidden": "This command is available to managers only."
+    },
+    "answer_flow": {
+      "prompt": "Reply to this message with the answer to question {number}.",
+      "placeholder": "Your answer",
+      "too_long": "The answer is too long. Please keep it under {limit} characters.",
+      "sent": "The answer was sent."
+    },
+    "ask_manager": {
+      "sent": "Your question was passed to a manager."
+    },
+    "privacy": {
+      "text": "<b>Your data in {product}</b>\n\n• Your company records the questions you ask here, the answers and the time, so that managers can improve the instructions and answer what the documents do not cover.\n• Your manager and the company administrators can see your questions, incidents and tasks. Other employees cannot.\n• Answers come only from your company's approved documents; the bot never decides anything on its own.\n• Data is kept for the periods set by your company and then deleted automatically.\n• To get a copy of your data or to have it deleted, ask your manager or the company administrator: they can export or erase it.\n• /unlink disconnects this Telegram account at any time."
+    },
+    "unlink": {
+      "confirm": "Unlink this Telegram account from <b>{workspace}</b>? You will stop receiving answers and notifications here.",
+      "button": "Unlink",
+      "done": "This Telegram account is unlinked. To connect again, ask your manager for a new invitation link.",
+      "not_linked": "This Telegram account is not linked."
+    },
+    "subscription": {
+      "paused": "Answers from the documents are paused for your company right now. You can still report incidents and work with your tasks."
+    },
+    "limits": {
+      "ai_exhausted": "Your company has used all questions to the assistant for this month. I can pass your question to a manager."
+    },
+    "hours": {
+      "one": "{count} hour",
+      "other": "{count} hours"
+    },
+    "hours_ago": {
+      "one": "{count} hour ago",
+      "other": "{count} hours ago"
+    },
+    "notify": {
+      "open": "Open",
+      "open_web": "Open in web",
+      "take": "Take",
+      "start": "Start",
+      "done": "Done",
+      "answer": "Answer",
+      "dismiss": "Dismiss",
+      "test_message": "<b>Test message</b>\nThe company bot is connected and can deliver notifications.",
+      "severity": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high"
+      },
+      "incident_status": {
+        "open": "open",
+        "in_progress": "in progress",
+        "resolved": "resolved",
+        "closed": "closed"
+      },
+      "question_reason": {
+        "low_confidence": "not confident in the documents",
+        "not_found": "not found in the documents",
+        "conflict": "documents disagree",
+        "user_request": "asked by the employee",
+        "limit_reached": "monthly limit reached"
+      },
+      "limit_key": {
+        "seats": "seats",
+        "documents": "documents",
+        "storage_mb": "storage, MB",
+        "ai_queries_monthly": "questions per month",
+        "max_pages_per_document": "pages per document",
+        "max_file_mb": "file size, MB",
+        "bots": "bots"
+      },
+      "incident_created": {
+        "title": "<b>New incident {number}</b> — {category}",
+        "severity": "Severity: {severity}",
+        "department": "Department: {department}",
+        "reporter": "Reported by {reporter}, {created}",
+        "client": "Client or property: {client}"
+      },
+      "incident_status_changed": {
+        "title": "<b>Incident {number}</b>: {status}",
+        "assignee": "Responsible: {assignee}"
+      },
+      "task_assigned": {
+        "title": "<b>New task {number}</b>",
+        "due": "Due: {due}",
+        "incident": "Related incident: {incident}",
+        "assigned_by": "Assigned by {name}"
+      },
+      "task_reminder": {
+        "pre_due": "<b>Task {number} is due soon</b>",
+        "due": "<b>Task {number} is due now</b>",
+        "overdue": "<b>Task {number} is overdue by {hours}</b>",
+        "due_at": "Due: {due}"
+      },
+      "task_escalated": {
+        "title": "<b>Task {number} is overdue by {hours}</b>",
+        "assignee": "Assignee: {assignee}",
+        "due": "Due: {due}"
+      },
+      "question_escalated": {
+        "title": "<b>Question {number} needs your answer</b>",
+        "employee": "From {employee}{department}, {asked}",
+        "reason": "Reason: {reason}"
+      },
+      "question_answered": {
+        "title": "<b>Manager's answer (not from the regulations)</b>"
+      },
+      "review_due": {
+        "title": "<b>Time to review a document</b>",
+        "document": "«{title}»{version}",
+        "due": "Review date: {due}",
+        "version": ", version {version}"
+      },
+      "limits_notice": {
+        "title": "<b>Plan limit almost reached</b>",
+        "usage": "{limit_name}: {used} of {limit}"
+      },
+      "bot_revoked": {
+        "title": "<b>The company bot stopped working</b>",
+        "text": "Telegram rejected the token of @{username}. Reconnect the bot in the {product} settings so employees get answers again."
+      }
+    }
+  }
+}

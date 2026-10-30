@@ -1,0 +1,41 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Http\Requests\Members;
+
+use App\Enums\WorkspaceRole;
+use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Enum;
+
+final class InviteMemberRequest extends FormRequest
+{
+    public function authorize(): bool
+    {
+        return $this->user()?->can('members.manage') ?? false;
+    }
+
+    /** @return array<string, array<int, ValidationRule|string|Enum>> */
+    public function rules(): array
+    {
+        return [
+            'email' => ['required', 'string', 'email:rfc', 'max:255'],
+            'role' => ['required', 'string', Rule::enum(WorkspaceRole::class)],
+            'department_ids' => ['nullable', 'array', 'max:20'],
+            'department_ids.*' => ['integer', 'distinct'],
+        ];
+    }
+
+    /** @return list<int> */
+    public function departmentIds(): array
+    {
+        return array_values(array_map('intval', (array) $this->validated('department_ids', [])));
+    }
+
+    public function role(): WorkspaceRole
+    {
+        return WorkspaceRole::from((string) $this->validated('role'));
+    }
+}

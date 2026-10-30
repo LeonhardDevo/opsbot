@@ -1,0 +1,46 @@
+* text=auto eol=lf
+
+*.sh        text eol=lf
+*.bash      text eol=lf
+*.sql       text eol=lf
+*.env       text eol=lf
+.env*       text eol=lf
+Dockerfile* text eol=lf
+*.Dockerfile text eol=lf
+*.conf      text eol=lf
+*.ini       text eol=lf
+
+*.ps1  text eol=crlf
+*.psm1 text eol=crlf
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+
+package-lock.json  -diff linguist-generated=true
+pnpm-lock.yaml     -diff linguist-generated=true
+composer.lock      -diff linguist-generated=true
+uv.lock            -diff linguist-generated=true
+
+apps/web/resources/js/actions/**  linguist-generated=true
+apps/web/resources/js/routes/**   linguist-generated=true
+apps/web/resources/js/wayfinder/** linguist-generated=true
+
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.webp   binary
+*.ico    binary
+*.pdf    binary
+*.docx   binary
+*.woff   binary
+*.woff2  binary
+*.ttf    binary
+
+*.css  diff=css
+*.php  diff=php
+*.md   diff=markdown
+*.py   diff=python
+
+/.github   export-ignore
+/e2e       export-ignore
+/docs/adr  export-ignore
